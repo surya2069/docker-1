@@ -1,0 +1,19 @@
+version: "3"
+services:
+  paytm:
+    build: ./paytm
+    ports:
+      - "9090:80"
+    networks: 
+      - "abc"
+
+  zomato:
+    build: ./zomato
+    ports:
+      - "9091:80"
+    networks:
+      - "abc"
+
+networks:
+  abc:
+    driver: bridge
